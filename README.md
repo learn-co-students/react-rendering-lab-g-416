@@ -45,7 +45,7 @@ that it takes a bit of time for the new .gif to display. Perhaps we'd like a lit
 loading bar? Now, in reality you could do this loading bar in React, however for the sake of this example, lets imagine
 that the loading bar is done by a different library that React has no control over. You can set this loading bar in the
 `showLoadingBar()` function which is already created for you in `<Animation />`. Call this function through the
-`componentWillUpdate()` lifecycle method and see that happens! If you've done it correctly you should see a pink loading
+`componentWillUpdate()` lifecycle method and see that happen! If you've done it correctly you should see a pink loading
 bar at the top of the screen every time a new .gif is being loaded.
 
 By the end of this section, the test under `<Animation />` should be passing.
