@@ -27,14 +27,14 @@ describe('Rating', () => {
   });
 });
 
-describe('Circle', () => {
-  it('does not re-render when the same color is passed in twice', () => {
-    const spy = expect.spyOn(Circle.prototype, 'render').andCallThrough();
-    const wrapper = shallow(<Circle color='red' />);
-    wrapper.setProps({ color: 'red' });
-    expect(spy.calls.length).toEqual(1);
-  });
-});
+// describe('Circle', () => {
+//   it('does not re-render when the same color is passed in twice', () => {
+//     const spy = expect.spyOn(Circle.prototype, 'render').andCallThrough();
+//     const wrapper = shallow(<Circle color='red' />);
+//     wrapper.setProps({ color: 'red' });
+//     expect(spy.calls.length).toEqual(1);
+//   });
+// });
 
 describe('Animation', () => {
   it('triggers the loading bar when a rerender is about to take place ', () => {

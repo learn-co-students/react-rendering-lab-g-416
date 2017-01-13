@@ -10,13 +10,20 @@ class Animation extends React.Component {
     this.showLoadingBar = this.showLoadingBar.bind(this);
     this.getNewCat = this.getNewCat.bind(this);
   }
+  componentWillUpdate(){
+    debugger
+    this.showLoadingBar();
 
+
+  }
   getNewCat() {
     fetch('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC')
       .then((res, err) => {
         if (err) {
+
           console.log('Something went wrong with fetching your new cat!', err)
         } else {
+          debugger
           res.json().then(result => this.setState({ url: result.data.fixed_height_downsampled_url }));
         }
       });
