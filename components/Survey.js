@@ -7,6 +7,12 @@ function random(array) {
 
 class Survey extends React.Component {
 
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      increasing: nextProps.rating > this.props.rating
+    })
+  }
+
   constructor(props) {
     super(props);
 
