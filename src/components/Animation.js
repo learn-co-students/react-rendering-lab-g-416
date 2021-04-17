@@ -10,6 +10,11 @@ class Animation extends React.Component {
     };
   }
 
+  componentWillUpdate(nextProps, nextState)
+  {
+    this.showLoadingBar()
+  }
+
   getNewCat = () => {
     fetch('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC')
       .then((res, err) => {
